@@ -55,7 +55,7 @@ jobs:
           test="meow"
           Coverage=$( cat ./.github/workflows/Code-Coverage-Percent.txt )
           echo "break"
-          read -r firstline<./.github/workflows/Code-Coverage-Percent.txt
+          read -r firstline<Code-Coverage-Percent.txt
           echo $firstline
           echo "1: $Coverage 2:$test 3:$foo"
           echo This is also displayed

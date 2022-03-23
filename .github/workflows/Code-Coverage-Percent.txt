@@ -1,1 +1,1 @@
-5
+Code-Coverage=5

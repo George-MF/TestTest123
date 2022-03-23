@@ -41,9 +41,8 @@ jobs:
     runs-on: macOS-latest
     steps:
       - name: Download math result for job 2
-        uses: actions/download-artifact@v3
-        with:
-          name: homework
+        uses: actions/checkout@v2
+
       - name: Print the final result
         shell: bash
         run: |

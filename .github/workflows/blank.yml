@@ -53,6 +53,6 @@ jobs:
           #echo $Code_Coverage
           #echo This is also displayed
           
-          #echo This is displayed again
-          #echo $Code_Coverage
-          #echo This is also displayed
+          echo This is displayed again
+          echo $Code_Coverage
+          echo This is also displayed

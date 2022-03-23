@@ -47,7 +47,7 @@ jobs:
       - name: Print the final result
         shell: bash
         run: |
-          Coverage=$(cat ./.github/workflows/Code-Coverage-Percent.txt)
+          Coverage= cat ./.github/workflows/Code-Coverage-Percent.txt
           echo "Code_Coverage=$Coverage" >> $GITHUB_ENV
           Cove_Coverage=$Coverage
           #echo This is displayed again
@@ -55,5 +55,5 @@ jobs:
           #echo This is also displayed
           test="meow"
           echo This is displayed again
-          echo "1: $Code_Coverage 2:$test"
+          echo "1: $Coverage 2:$test"
           echo This is also displayed

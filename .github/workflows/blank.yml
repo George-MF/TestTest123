@@ -56,3 +56,4 @@ jobs:
           Coverage=$( cat ./.github/workflows/Code-Coverage-Percent.txt )
           echo "1: $Coverage 2:$test"
           echo This is also displayed
+          ls

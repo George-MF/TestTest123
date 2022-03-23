@@ -51,7 +51,7 @@ jobs:
           echo "Code_Coverage=$Coverage" >> $GITHUB_ENV
           Cove_Coverage=$Coverage
           #echo $Code_Coverage
-          #echo This is also displayed
+          #echo This is also displayed PLEASE WORK
           test="meow"
           echo This is displayed again
           echo "1: $Coverage 2:$test"

@@ -46,10 +46,6 @@ jobs:
       - name: Print the final result
         shell: bash
         run: |
-          cat ./.github/workflows/Code-Coverage-Percent.txt >> $GITHUB_ENV
-          echo This is displayed
-          echo "${{ env.Code_Coverage }}"
-          echo This is also displayed
           Coverage=$(cat ./.github/workflows/Code-Coverage-Percent.txt)
           echo "Code_Coverage=$Coverage" >> $GITHUB_ENV
           echo This is displayed again

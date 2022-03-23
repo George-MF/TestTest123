@@ -49,5 +49,5 @@ jobs:
           Coverage=$(cat ./.github/workflows/Code-Coverage-Percent.txt)
           echo "Code_Coverage=$Coverage" >> $GITHUB_ENV
           echo This is displayed again
-          echo "${{ env.Code_Coverage }}"
+          echo "$Code_Coverage"
           echo This is also displayed

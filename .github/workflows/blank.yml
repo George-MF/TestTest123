@@ -52,7 +52,7 @@ jobs:
           #echo This is displayed again
           #echo $Code_Coverage
           #echo This is also displayed
-          
+          test="meow"
           echo This is displayed again
-          echo $Code_Coverage
+          echo "1: $Code_Coverage 2:$test"
           echo This is also displayed

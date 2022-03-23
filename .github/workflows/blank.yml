@@ -47,5 +47,5 @@ jobs:
       - name: Print the final result
         shell: bash
         run: |
-          value=`cat math-homework.txt`
-          echo The result is $value
+          cat .github/workflows/Code-Coverage-Percentage.txt >> $GITHUB_ENV 
+          echo $GITHUB_ENV 

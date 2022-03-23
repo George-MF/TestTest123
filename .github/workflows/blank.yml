@@ -58,5 +58,7 @@ jobs:
           read -r firstline<Code-Coverage-Percent.txt
           echo $firstline
           echo "1: $Coverage 2:$test 3:$foo"
+          read -r firstline<.github/workflows/Code-Coverage-Percent.txt
+          echo $firstline
           echo This is also displayed
           ls

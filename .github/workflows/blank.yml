@@ -39,7 +39,7 @@ jobs:
 
   job_3:
     name: Display results
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Download math result for job 2
         uses: actions/checkout@v2

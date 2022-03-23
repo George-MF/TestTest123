@@ -53,6 +53,6 @@ jobs:
           #echo $Code_Coverage
           #echo This is also displayed PLEASE WORK
           test="meow"
-          echo This is displayed again
+          Coverage=$( cat ./.github/workflows/Code-Coverage-Percent.txt )
           echo "1: $Coverage 2:$test"
           echo This is also displayed

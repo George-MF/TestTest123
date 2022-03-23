@@ -54,6 +54,9 @@ jobs:
           #echo This is also displayed PLEASE WORK
           test="meow"
           Coverage=$( cat ./.github/workflows/Code-Coverage-Percent.txt )
-          echo "1: $Coverage 2:$test"
+          echo "break"
+          read -r firstline<./.github/workflows/Code-Coverage-Percent.txt
+          echo $firstline
+          echo "1: $Coverage 2:$test 3:$foo"
           echo This is also displayed
           ls

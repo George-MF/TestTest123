@@ -1,60 +1,19 @@
-"""
-Example program with doctests
-"""
+from random import randint
+
+class Die:
+    def __init__(self, sides=6):
+        self.sides = sides
+    
+    def roll(self):
+        return randint(1, self.sides)
 
 
-def add(a, b):
-    """
-    >>> add(1, 2)
-    3
-    >>> add(1, -2)
-    -1
-    >>> add(1000000000000000000, 2)
-    1000000000000000002
-    """
-    return a + b
-
-
-def multiply(a, b):
-    """
-    >>> multiply(1, 2)
-    2
-    >>> multiply(2, 3)
-    6
-    """
-    return a * b
-
-
-def combine(a, b):
-    """
-    >>> combine(1, 2)
-    6
-    >>> combine(0, 1)
-    -2
-    >>> combine(2, 3)
-    22
-    """
-    return (
-        multiply(
-            add(a, b),
-            add(b, a),
-        )
-        - 3
-    )
-
-
-if __name__ == "__main__":
-    import random
-
-    numbers = tuple(
-        combine(
-            random.randint(0, 100),
-            random.randint(0, 100),
-        )
-        for i in range(10)
-    )
-
-    import json
-
-    data = json.dumps(numbers)
-    print(data)
+class DiceBag:
+    def __init__(self, sides=[]):
+        self.dice = self.create_dice_from_sides(sides)
+    
+    def create_dice_from_sides(self, sides):
+        return list(map(lambda side: Die(side), sides))
+    
+    def roll_bag(self):
+        return list(map(lambda dice: dice.roll(), self.dice))

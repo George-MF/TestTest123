@@ -1,9 +1,10 @@
-from app.example import *
+import unittest
+from dice_package.dice import Die
 
+class TestDie(unittest.TestCase):
 
-def test_thing1():
-    assert add(1, 2) == 3
+    def setUp(self):
+        self.die = Die()
 
-
-def test_thing2():
-    assert True
+    def test_upper(self):
+        self.assertEqual('foo'.upper(), 'FOO')

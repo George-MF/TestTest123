@@ -45,3 +45,7 @@ jobs:
       with:
           name: unittest.json
           path: coverage.json
+    - name : test
+      run: |
+          var=cat coverage.json | grep -Eo '[0-9]+' | tail -3 | head -n 1
+          echo $var

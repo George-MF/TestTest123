@@ -1,5 +1,5 @@
 import unittest
-from dice_package.dice import Die
+from app.example import Die
 
 class TestDie(unittest.TestCase):
 

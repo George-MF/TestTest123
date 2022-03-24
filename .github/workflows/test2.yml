@@ -1,22 +1,27 @@
-name: test2
+name: CodeCov
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+
+
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 jobs:
   run:
     runs-on: ubuntu-latest
+    env:
+      OS: ubuntu-latest
+      PYTHON: '3.9'
     steps:
-
-
+    - uses: actions/checkout@master
     - name: Setup Python
       uses: actions/setup-python@master
       with:
         python-version: 3.7
-    - name: Generate Report
+    - name: 'generate report'
       run: |
         pip install coverage
         coverage run -m unittest

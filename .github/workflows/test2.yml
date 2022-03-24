@@ -24,7 +24,7 @@ jobs:
     - name: 'generate report'
       run: |
         pip install coverage
-        coverage json -m unittest
+        coverage json unittest
         ls
     - name: Upload math result for job 1
       uses: actions/upload-artifact@v3

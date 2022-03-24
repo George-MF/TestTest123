@@ -50,6 +50,6 @@ jobs:
           bob=$( cat coverage.json | grep -Eo '[0-9]+' | tail -3 | head -n 1 )
           echo $bob > Code-Coverage-Percent.txt
     - name : Auto commit
-    - uses: stefanzweifel/git-auto-commit-action@v4
+      uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: No way this works

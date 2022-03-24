@@ -26,20 +26,21 @@ jobs:
         pip install coverage
         
         coverage run -m --omit="*/tests*" unittest
-        #coverage report
+
         read -r firstline<Code-Coverage-Percent.txt
-        echo $firstline
+        
         coverage report --fail-under=$firstline
+        
         coverage html
         coverage json --pretty-print
         ls -lR
-    - name: Upload html for job 1
+    - name: Upload html report
       uses: actions/upload-artifact@v3
       with:
           name: unittest
           path: htmlcov/index.html
           
-    - name: Upload json for job 1
+    - name: Upload json report
       uses: actions/upload-artifact@v3
       with:
           name: unittest.json

@@ -14,3 +14,9 @@ jobs:
       run: |
         pip install coverage
         coverage run -m unittest
+        
+    - name: Upload math result for job 1
+      uses: actions/upload-artifact@v3
+      with:
+          name: unittest
+          path: math-homework.txt

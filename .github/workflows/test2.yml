@@ -25,6 +25,8 @@ jobs:
       run: |
         pip install coverage
         coverage run -m unittest
+        coverage report
+        coverage html
         ls -lR
     - name: Upload math result for job 1
       uses: actions/upload-artifact@v3

@@ -1,4 +1,4 @@
-name: CodeCov
+name: test2
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
@@ -25,7 +25,7 @@ jobs:
       run: |
         pip install coverage
         coverage run -m unittest
-        
+        ls
     - name: Upload math result for job 1
       uses: actions/upload-artifact@v3
       with:

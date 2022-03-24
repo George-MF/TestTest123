@@ -6,6 +6,8 @@ class Die:
     
     def roll(self):
         return randint(1, self.sides)
+    def name(self):
+        return "My name is jeff"
 
 
 class DiceBag:

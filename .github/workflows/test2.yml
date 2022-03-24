@@ -24,9 +24,12 @@ jobs:
     - name: 'generate report'
       run: |
         pip install coverage
+        
         coverage run -m --omit="*/tests*" unittest
         #coverage report
-        coverage report --fail-under=80
+        read -r firstline<Code-Coverage-Percent.txt
+        echo $firstline
+        coverage report --fail-under=$firstline
         coverage html
         coverage json --pretty-print
         ls -lR

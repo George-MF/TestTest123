@@ -24,7 +24,7 @@ jobs:
     - name: 'generate report'
       run: |
         pip install coverage
-        coverage run -m --omit="*/tests*" 
+        coverage run --omit="*/tests*" 
         coverage report
         coverage html
         coverage json --pretty-print

@@ -27,9 +27,16 @@ jobs:
         coverage run -m --omit="*/tests*" unittest
         coverage report
         coverage html
+        coverage json --pretty-print
         ls -lR
-    - name: Upload math result for job 1
+    - name: Upload html for job 1
       uses: actions/upload-artifact@v3
       with:
           name: unittest
           path: htmlcov/index.html
+          
+    - name: Upload json for job 1
+      uses: actions/upload-artifact@v3
+      with:
+          name: unittest.json
+          path: htmlcov/index.json
